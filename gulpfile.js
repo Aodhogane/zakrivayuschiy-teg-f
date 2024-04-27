@@ -63,19 +63,27 @@ function clean() {
   return del('dist');
 }
 
+function scripts(){
+  return gulp.src(['src/scripts/**/*'])
+  .pipe(gulp.dest('dist/scripts/'))
+  .pipe(browserSync.reload({stream: true}));
+}
+
 function watchFiles() {
   gulp.watch(['src/**/*.html'], html);
   gulp.watch(['src/blocks/**/*.css'], css);
   gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
+  gulp.watch(['src/scripts/**/*.js'], scripts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, images));
+const build = gulp.series(clean, gulp.parallel(html, css, images, scripts));
 const watchapp = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
 exports.css = css;
 exports.images = images;
 exports.clean = clean;
+exports.scripts= scripts;
 
 exports.build = build;
 exports.watchapp = watchapp;
