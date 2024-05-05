@@ -7,10 +7,11 @@
    <link rel="stylesheet" href=".//bundle.css"/>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>
+    <link rel="icon" href="./images/svg/favicon.svg">
   </head>
   <body class="page">
     <header class="header">
-      <a href="#" class="header__link">&lt;/html&gt;</a>
+      <a class="header__link">&lt;/html&gt;</a>
       <h1 class="header__title">Закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <ul class="theme-menu__list">
@@ -54,7 +55,7 @@
               Место для ваших воспоминаний о начале обучения.
             </p>
             <div class="card__like-button-container">
-              <button class="card__icon-button" aria-labelledby="html-1">
+              <button type="button | reset | submit" class="card__icon-button" aria-labelledby="html-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg" class="like-icon" viewBox="0 0 39 36" fill="none" aria-hidden="true">
                   <g class="heart">
@@ -525,6 +526,7 @@
       </section>
 
       <button
+        type="button | reset | submit"
         class="button save-button"
         onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id"
@@ -554,9 +556,9 @@
           </svg>
           <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <form>
+        <form method="dialog">
           <button
-            class="button ok-button" onclick="window['dialog-id'].close()" type="submit" aria-controls="dialog-id">
+            class="button" onclick="window['dialog-id'].close()" type="submit" aria-controls="dialog-id">
             <span class="button__text">Ok</span>
           </button>
         </form>
