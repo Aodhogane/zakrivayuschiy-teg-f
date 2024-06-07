@@ -21,27 +21,12 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--text-color);
-  background: repeating-linear-gradient(
-      90deg,
-      var(--background-color),
-      var(--background-color) 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      180deg,
-      var(--background-color-start),
-      var(--background-color-end) 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      180deg,
-      var(--background-color-start) 0.01%,
-      var(--background-color-end)
-    );
+  background: repeating-linear-gradient( 90deg, var(--background-color), var(--background-color) 2px, transparent 2px, transparent 4px ),
+    repeating-linear-gradient(180deg, var(--background-color-start), var(--background-color-end) 2px, transparent 2px, transparent 4px ),
+    repeating-linear-gradient( 180deg, var(--background-color-start) 0.01%, var(--background-color-end) );
   background-attachment: fixed;
   background-size: cover;
+  background-color: var(--second-color-light), var(--second-color-dark);
 }
 
 /*Фильт для фотографий*/
@@ -130,9 +115,10 @@
 }
 
 .like-icon .heart {
-  transition: ease;
+  transition: all 0.5s linear; /* Здесь задается линейная функция перехода */
   transform-origin: center center;
 }
+
 
 .like-icon .contour {
   transition: fill 0.1s; 
@@ -146,8 +132,9 @@
 
 .like-icon .core {
   fill: var(--page-background);
-  transition: ease 0.3s 0.05s;
+  transition: fill 0.3s linear 0.05s; /*надо поменять времия*/
 }
+
 
 .like-icon .sparks {
   opacity: 0;
