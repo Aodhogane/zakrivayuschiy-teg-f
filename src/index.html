@@ -55,7 +55,7 @@
               Место для ваших воспоминаний о начале обучения.
             </p>
             <div class="card__like-button-container">
-              <button type="button | reset | submit" class="card__icon-button" aria-labelledby="html-1">
+              <button type="button" class="card__icon-button" aria-labelledby="html-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg" class="like-icon" viewBox="0 0 39 36" fill="none" aria-hidden="true">
                   <g class="heart">
@@ -526,8 +526,7 @@
       </section>
 
       <button
-        type="button | reset | submit"
-        class="button save-button"
+        class="button save-button" type="button"
         onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id"
       >
@@ -558,7 +557,11 @@
         </div>
         <form method="dialog">
           <button
-            class="button" onclick="window['dialog-id'].close()" type="submit" aria-controls="dialog-id">
+            class="button ok-button" 
+            onclick="window['dialog-id'].close()" 
+            type="submit" 
+            aria-controls="dialog-id"
+            >
             <span class="button__text">Ok</span>
           </button>
         </form>

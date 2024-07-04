@@ -14,40 +14,40 @@
 */
 
 .theme-menu__button:disabled::before {
-    animation: arrow-animation 0.5s ease-in-out infinite alternate;
+  animation: arrow-animation 0.5s ease-in-out infinite alternate;
+}
+
+.like-icon.is-liked .heart {
+  animation: scale-animation 0.3s ease-in 0.1s 1 alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-animation 0.3s ease-in 0.3s 1 alternate;
+}
+
+@keyframes arrow-animation {
+  from {
+    left: -20px;
   }
-  
-  .like-icon.is-liked .heart {
-    animation: scale-animation 0.3s ease-in 0.1s 1 alternate;
+  to {
+    left: -16px;
   }
-  
-  .like-icon.is-liked .sparks {
-    animation: sparks-animation 0.3s ease-in 0.3s 1 alternate;
+}
+
+@keyframes scale-animation {
+  from {
+    scale: 1;
   }
-  
-  @keyframes arrow-animation {
-    from {
-      left: -20px;
-    }
-    to {
-      left: -16px;
-    }
+  to {
+    scale: 1.5;
   }
-  
-  @keyframes scale-animation {
-    from {
-      scale: 1;
-    }
-    to {
-      scale: 1.5;
-    }
+}
+
+@keyframes sparks-animation {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes sparks-animation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
+}

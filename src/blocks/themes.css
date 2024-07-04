@@ -8,6 +8,7 @@
 /* Theme variables */
 
 :root.theme-light {
+  --second-color-light: #c0c0c0;
     --page-background: #fff;
     --background-color: #d3d3d3;
     --background-color-start: #e7e7e7;
@@ -20,7 +21,7 @@
     --stroke-color: var(--text-color);
     --label-stroke-color: var(--page-background);
   }
-
+  
   @media (prefers-color-scheme: light) {
     :root {
       --page-background: #fff;
@@ -34,11 +35,11 @@
       --mix-blend-color: var(--page-background);
       --stroke-color: var(--text-color);
       --label-stroke-color: var(--page-background);
-      --second-color-light: #c0c0c0;
     }
   }
   
   :root.theme-dark {
+    --second-color-dark: #100606; 
     --page-background: #000;
     --background-color: var(--page-background);
     --background-color-start: #007f0c;
@@ -51,7 +52,7 @@
     --stroke-color: var(--text-color);
     --label-stroke-color: var(--page-background);
   }
-
+  
   @media (prefers-color-scheme: dark) {
     :root {
       --page-background: #000;
@@ -65,6 +66,5 @@
       --mix-blend-color: var(--text-color);
       --stroke-color: var(--text-color);
       --label-stroke-color: var(--page-background);
-      --second-color-dark: #100606; 
     }
   }
