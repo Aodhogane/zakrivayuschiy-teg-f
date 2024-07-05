@@ -21,25 +21,25 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--text-color);
-  background: repeating-linear-gradient(
-      90deg,
-      var(--background-color),
-      var(--background-color) 2px,
-      transparent 2px,
-      transparent 4px
+  background: repeating-linear-gradient( 
+    90deg, 
+    var(--background-color), 
+    var(--background-color) 2px,
+    transparent 2px, 
+    transparent 4px 
     ),
     repeating-linear-gradient(
-      180deg,
-      var(--background-color-start),
-      var(--background-color-end) 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      180deg,
-      var(--background-color-start) 0.01%,
-      var(--background-color-end)
-    );
+      180deg, 
+      var(--background-color-start), 
+      var(--background-color-end) 2px, 
+      transparent 2px, 
+      transparent 4px 
+      ),
+    repeating-linear-gradient( 
+      180deg, 
+      var(--background-color-start) 0.01%, 
+      var(--background-color-end) 
+      );
   background-attachment: fixed;
   background-size: cover;
   background-color: var(--second-color-light), var(--second-color-dark);
@@ -131,12 +131,11 @@
 }
 
 .like-icon .heart {
-  transition: all 0.5s linear;
-  transform-origin: center center;
+   transform-origin: center center;
 }
 
 .like-icon .contour {
-  transition: fill 0.1s linear;
+  transition: fill 0.1s; 
   fill: var(--text-color);
 }
 
@@ -146,9 +145,10 @@
 }
 
 .like-icon .core {
+  transition: fill 0.3s 0.05s linear; /*надо поменять времия*/
   fill: var(--page-background);
-  transition: fill 0.3s 0.03s;
 }
+
 
 .like-icon .sparks {
   opacity: 0;
@@ -164,11 +164,11 @@
 }
 
 .like-icon:active .main-body {
-  fill: var(--heart-color);
+    fill: var(--heart-color);
 }
 
 .like-icon:active .core {
-  fill: var(--heart-color);
+    fill: var(--heart-color);
 }
 
 .like-icon.is-liked .contour {
@@ -181,6 +181,31 @@
 
 .like-icon.is-liked .core {
   fill: var(--heart-color);
+}
+
+/*"Размеры"*/
+@keyframes sparkAnimation {
+  0% {
+      fill-opacity: 1;
+  }
+  50% {
+      fill-opacity: 0;
+  }
+  100% {
+      fill-opacity: 1;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.5);
+  }
+  100% {
+      transform: scale(1);
+  }
 }
 
 /* Кнопки */
@@ -248,7 +273,6 @@
   width: 100%;
   padding: 10px 0;
   background: var(--page-background);
-  
 }
 
 /*Main*/
@@ -409,6 +433,8 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
