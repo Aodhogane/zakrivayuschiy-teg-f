@@ -526,3 +526,7 @@
     padding: 32px 38px;
   }
 }
+
+#floppy-icon {
+  fill: var(--floppy-icon-light), var(--floppy-icon-dark);
+}

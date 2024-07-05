@@ -20,7 +20,8 @@
     --mix-blend-color: var(--page-background);
     --stroke-color: var(--text-color);
     --label-stroke-color: var(--page-background);
-  }
+    --floppy-icon-light:#fff;
+    }
   
   @media (prefers-color-scheme: light) {
     :root {
@@ -35,6 +36,7 @@
       --mix-blend-color: var(--page-background);
       --stroke-color: var(--text-color);
       --label-stroke-color: var(--page-background);
+      --floppy-icon-light:#fff;
     }
   }
   
@@ -51,6 +53,7 @@
     --mix-blend-color: var(--text-color);
     --stroke-color: var(--text-color);
     --label-stroke-color: var(--page-background);
+    --floppy-icon-dark:#00cc14;
   }
   
   @media (prefers-color-scheme: dark) {
@@ -66,5 +69,8 @@
       --mix-blend-color: var(--text-color);
       --stroke-color: var(--text-color);
       --label-stroke-color: var(--page-background);
+      --floppy-icon-dark:#00cc14;
     }
   }
+
+  
