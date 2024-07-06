@@ -401,6 +401,7 @@
   font-size: 18px;
   font-variation-settings: var(--title-font-weight);
   padding: 4px 10px;
+  content: 'Inter';
 }
 
 .card__image {
@@ -527,6 +528,3 @@
   }
 }
 
-#floppy-icon {
-  fill: var(--floppy-icon-light), var(--floppy-icon-dark);
-}
