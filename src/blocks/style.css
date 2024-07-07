@@ -135,8 +135,13 @@
 }
 
 .like-icon .contour {
-  transition: fill 0.1s; 
+  transition: fill 0.1s linear; 
   fill: var(--text-color);
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.06s;
 }
 
 .like-icon .main-body {
@@ -144,42 +149,43 @@
   transition: fill 0.3s linear;
 }
 
-.like-icon .core {
-  transition: fill 0.3s 0.05s linear; /*надо поменять времия*/
-  fill: var(--page-background);
-}
-
-
-.like-icon .sparks {
-  opacity: 0;
-  fill: var(--heart-color);
-}
-
-.like-icon:hover .main-body {
+.like-icon:hover .main-byod {
   fill: var(--text-color);
-}
-
-.like-icon:hover .core {
-  fill: var(--text-color);
+  transition-delay: 0.3s 0.05s;
 }
 
 .like-icon:active .main-body {
-    fill: var(--heart-color);
-}
-
-.like-icon:active .core {
-    fill: var(--heart-color);
-}
-
-.like-icon.is-liked .contour {
   fill: var(--heart-color);
+  transition-delay: 0.3s 0.05s;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-color);
+  transition-delay: 0.3s 0.05s;
+}
+
+.like-icon .core {
+  transition: fill 0.3s 0.3s linear;
+  fill: var(--page-background);
+}
+
+.like-icon:hover .core {
+  transition-delay: 0s;
+  fill: var(--text-color);
+}
+
+.like-icon:active .core {
+  transition: fill 0.3s 0.3s linear;
+  fill: var(--heart-color);
 }
 
 .like-icon.is-liked .core {
+  transition: fill 0.3s 0.3s linear;
+  fill: var(--heart-color);
+}
+
+.like-icon .sparks {
+  opacity: 0;
   fill: var(--heart-color);
 }
 
@@ -219,7 +225,7 @@
   background: none;
   border: 2px solid var(--stroke-color);
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out
 }
 
 .button::before {
@@ -254,8 +260,8 @@
 }
 
 .save-button {
-  padding: 15px 20px;
-  margin: 0 auto;
+  padding: 15px 19px;
+  margin: 0 auto 103px;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -420,17 +426,17 @@
 }
 
 .card__text-container {
-  padding: 26px 25px;
+  padding: 25px;
   font-size: 18px;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 25px;
 }
 
 .card__icon-button {
   padding: 0;
   width: 39px;
-  height: 37px;
+  height: 34px;
   background: transparent;
   border: none;
   cursor: pointer;
