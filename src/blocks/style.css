@@ -23,14 +23,14 @@
   color: var(--text-color);
   background: repeating-linear-gradient( 
     90deg, 
-    var(--background-color), 
+    var(--background-color) 0px, 
     var(--background-color) 2px,
     transparent 2px, 
     transparent 4px 
     ),
     repeating-linear-gradient(
       180deg, 
-      var(--background-color-start), 
+      var(--background-color-start) 0px, 
       var(--background-color-end) 2px, 
       transparent 2px, 
       transparent 4px 
@@ -430,7 +430,7 @@
 .card__icon-button {
   padding: 0;
   width: 39px;
-  height: 36px;
+  height: 37px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -527,4 +527,3 @@
     padding: 32px 38px;
   }
 }
-
