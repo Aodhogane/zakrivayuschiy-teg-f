@@ -261,7 +261,7 @@
 
 .save-button {
   padding: 15px 19px;
-  margin: 0 auto 103px;
+  margin: 0 auto;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -271,6 +271,7 @@
 @media (width <= 375px) {
   .save-button {
     flex-direction: column;
+    margin: 0 auto 100px;
   }
 }
 
@@ -287,6 +288,13 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding-bottom: 105px;
+}
+
+@media (width <= 375px){
+  .main {
+    padding-bottom: 100px;
+  }
 }
 
 /*Header*/
@@ -393,7 +401,7 @@
 .section {
   display: inherit;
   flex-direction: inherit;
-  gap: inherit;
+  gap: 50px;
 }
 
 /*Cards*/
@@ -426,7 +434,7 @@
 }
 
 .card__text-container {
-  padding: 25px;
+  padding: 25px 25px 26px;
   font-size: 18px;
   display: flex;
   flex-direction: column;
