@@ -130,6 +130,12 @@
   z-index: 1;
 }
 
+.like-icon .core {
+  fill: var(--text-color);
+  -webkit-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
 .like-icon .heart {
    transform-origin: center center;
 }
@@ -141,7 +147,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--heart-color);
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon .main-body {
@@ -171,11 +177,6 @@
 
 .like-icon:active .core {
   transition: fill 0.3s linear 0.3s;
-  fill: var(--heart-color);
-}
-
-.like-icon:active .core {
-  transition: fill 0.3s linear 0.3s ;
   fill: var(--heart-color);
 }
 
@@ -415,7 +416,6 @@
   font-size: 18px;
   font-variation-settings: var(--title-font-weight);
   padding: 4px 10px;
-  content: 'Inter';
 }
 
 .card__image {
