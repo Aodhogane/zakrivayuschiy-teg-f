@@ -166,7 +166,7 @@
 
 .like-icon .core {
   transition: fill 0.3s linear 0.03s;
-  fill: var(--text-color);
+  fill: transparent;
 }
 
 .like-icon:hover .core {
@@ -438,6 +438,12 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+@media (width <= 375px) {
+  .card__text-container{
+    padding: 25px 25px 23px;
+  }
 }
 
 .card__icon-button {
