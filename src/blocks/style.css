@@ -130,12 +130,6 @@
   z-index: 1;
 }
 
-.like-icon .core {
-  fill: var(--text-color);
-  -webkit-transition: fill 0.3s linear;
-  transition: fill 0.3s linear;
-}
-
 .like-icon .heart {
    transform-origin: center center;
 }
@@ -170,18 +164,23 @@
   transition-delay: fill 0.3s linear 0.05s;
 }
 
+.like-icon .core {
+  transition: fill 0.3s linear 0.03s;
+  fill: var(--text-color);
+}
+
 .like-icon:hover .core {
-  transition-delay: 0s;
+  transition: fill 0.3s linear;
   fill: var(--text-color);
 }
 
 .like-icon:active .core {
-  transition: fill 0.3s linear 0.3s;
+  transition: fill 0.3s linear;
   fill: var(--heart-color);
 }
 
 .like-icon.is-liked .core {
-  transition: fill 0.3s linear 0.3s;
+  transition: fill 0.3s linear;
   fill: var(--heart-color);
 }
 
@@ -272,7 +271,7 @@
 @media (width <= 375px) {
   .save-button {
     flex-direction: column;
-    margin: 0 auto 100px;
+    margin: 0 auto; 
   }
 }
 
