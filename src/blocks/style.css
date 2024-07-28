@@ -443,6 +443,7 @@
 @media (width <= 375px) {
   .card__text-container{
     padding: 25px 25px 23px;
+    gap: 24.9px;
   }
 }
 
