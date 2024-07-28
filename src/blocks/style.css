@@ -21,28 +21,20 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--text-color);
-  background: repeating-linear-gradient( 
-    90deg, 
-    var(--background-color) 0px, 
-    var(--background-color) 2px,
-    transparent 2px, 
-    transparent 4px 
-    ),
-    repeating-linear-gradient(
-      180deg, 
-      var(--background-color-start) 0px, 
-      var(--background-color-end) 2px, 
-      transparent 2px, 
-      transparent 4px 
-      ),
-    repeating-linear-gradient( 
-      180deg, 
-      var(--background-color-start) 0.01%, 
-      var(--background-color-end) 
-      );
+  background: repeating-linear-gradient(90deg, var(--background-color) 0 2px, rgb(211 211 211 / 0) 2px 4px),
+  repeating-linear-gradient(180deg, var(--background-color-start) 0 2px, rgb(211 211 211 / 0) 2px 4px),
+  linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 0.01%, var(--page-background) 100%);
   background-attachment: fixed;
   background-size: cover;
   background-color: var(--second-color-light), var(--second-color-dark);
+}
+
+@media (width <= 375px) {
+  .page{
+    background: repeating-linear-gradient(90deg, var(--background-color) 0 2px, rgb(211 211 211 / 0) 2px 4px),
+  repeating-linear-gradient(180deg, var(--background-color-end) 0 2px, rgb(211 211 211 / 0) 2px 4px),
+  linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 0.01%, var(--page-background) 100%);
+  }
 }
 
 /*Фильт для фотографий*/
@@ -122,72 +114,6 @@
   }
 }
 
-.like-icon {
-  width: inherit;
-  height: inherit;
-  fill: var(--text-color);
-  position: relative;
-  z-index: 1;
-}
-
-.like-icon .heart {
-   transform-origin: center center;
-}
-
-.like-icon .contour {
-  transition: fill 0.1s linear; 
-  fill: var(--text-color);
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-color);
-  transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon .main-body {
-  fill: var(--page-background);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--text-color);
-  transition-delay: fill 0.3s linear 0.05s;
-}
-
-.like-icon:active .main-body {
-  fill: var(--heart-color);
-  transition-delay: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-color);
-  transition-delay: fill 0.3s linear 0.05s;
-}
-
-.like-icon .core {
-  transition: fill 0.3s linear 0.03s;
-  fill: transparent;
-}
-
-.like-icon:hover .core {
-  transition: fill 0.3s linear;
-  fill: var(--text-color);
-}
-
-.like-icon:active .core {
-  transition: fill 0.3s linear;
-  fill: var(--heart-color);
-}
-
-.like-icon.is-liked .core {
-  transition: fill 0.3s linear;
-  fill: var(--heart-color);
-}
-
-.like-icon .sparks {
-  opacity: 0;
-  fill: var(--heart-color);
-}
 
 /*"Размеры"*/
 @keyframes sparkAnimation {
