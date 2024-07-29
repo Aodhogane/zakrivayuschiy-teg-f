@@ -13,7 +13,7 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 .like-icon.is-liked {
-  animation: arrow-animation 0.3s 0.1s ease-in 1 alternate;
+  animation: scale-animation 0.3s 0.1s ease-in 1 alternate;
 }
 
 .theme-menu__button:disabled::before {
@@ -42,7 +42,7 @@
     scale: 1;
   }
   to {
-    scale: 1.5;
+    scale: 1.15;
   }
 }
 
