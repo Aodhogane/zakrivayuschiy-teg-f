@@ -22,19 +22,11 @@
   min-block-size: 100dvb;
   color: var(--text-color);
   background: repeating-linear-gradient(90deg, var(--background-color) 0 2px, rgb(0 0 0 / 0) 2px 4px),
-  repeating-linear-gradient(180deg, var( --background-color-start) 0 2px, rgb(0 0 0 / 0) 2px 4px),
-  linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 0.01%, var(--page-background) 100%);
+  repeating-linear-gradient(180deg, var(--background-color) 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  linear-gradient(180deg, var(--background-color-start) 0%, var(--background-color-start) 0.01%, var(--background-color-end) 100%);
   background-attachment: fixed;
   background-size: cover;
   background-color: var(--second-color-light), var(--second-color-dark);
-}
-
-@media (width <= 375px) {
-  .page{
-    background: repeating-linear-gradient(90deg, var(--background-color) 0 2px, rgb(211 211 211 / 0) 2px 4px),
-  repeating-linear-gradient(180deg, var(--background-color-end) 0 2px, rgb(211 211 211 / 0) 2px 4px),
-  linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 0.01%, var(--page-background) 100%);
-  }
 }
 
 /*Фильт для фотографий*/
