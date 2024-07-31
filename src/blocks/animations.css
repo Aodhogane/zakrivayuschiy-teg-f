@@ -99,7 +99,7 @@
 }
 
 .like-icon .core {
-  transition: fill 0.3s  0.03s linear;
+  transition: fill 0.3s 0.03s linear;
   fill: transparent;
 }
 

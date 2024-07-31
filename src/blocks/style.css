@@ -271,7 +271,7 @@
   border: none;
   overflow: hidden;
   opacity: 1;
-  transition: 0.5s ease-in-out;
+  transition: opacity 0.3s ease;
   cursor: pointer;
 }
 
@@ -359,7 +359,7 @@
 }
 
 @media (width <= 375px) {
-  .card__text-container{
+  .card__text-container {
     padding: 25px 25px 23px;
     gap: 24.9px;
   }
@@ -394,6 +394,16 @@
   align-items: center;
   justify-content: end;
   gap: 6px;
+}
+
+.card__text {
+  line-height: 1.2em;
+}
+
+@media (width <= 375px) { 
+  .card__text {
+    line-height: 1.2em;
+  }
 }
 
 @media (width <= 375px) {
