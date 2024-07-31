@@ -351,17 +351,16 @@
 }
 
 .card__text-container {
-  padding: 25px 25px 26px;
+  gap: 27px;
+  padding: 25px 25px 25.5px;
   font-size: 18px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
 }
 
 @media (width <= 375px) {
   .card__text-container {
-    padding: 25px 25px 23px;
-    gap: 24.9px;
+    padding: 25px 25px 26px;
   }
 }
 
@@ -397,13 +396,7 @@
 }
 
 .card__text {
-  line-height: 1.2em;
-}
-
-@media (width <= 375px) { 
-  .card__text {
-    line-height: 1.2em;
-  }
+  line-height: 21px;
 }
 
 @media (width <= 375px) {
